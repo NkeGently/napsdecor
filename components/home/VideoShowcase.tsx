@@ -20,7 +20,7 @@ import { Play } from "lucide-react";
 
 const videos = [
   {
-    tiktokId: "REPLACE_WITH_TIKTOK_VIDEO_ID_1",
+    tiktokId: "7519197687942532357",
     title: "Living Room Transformation",
     category: "Residential",
     description: "A stunning living room makeover blending modern luxury with timeless elegance.",
@@ -28,14 +28,14 @@ const videos = [
     thumbnail: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
   },
   {
-    tiktokId: "REPLACE_WITH_TIKTOK_VIDEO_ID_2",
+    tiktokId: "7478468950192344375",
     title: "Kitchen & Dining Reveal",
     category: "Kitchen Design",
     description: "From bare walls to a world-class culinary space — see the complete transformation.",
     thumbnail: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
   },
   {
-    tiktokId: "REPLACE_WITH_TIKTOK_VIDEO_ID_3",
+    tiktokId: "7582323145600666936",
     title: "Full Apartment Redesign",
     category: "Apartment",
     description: "A complete apartment overhaul — every room reinvented with purpose and beauty.",
