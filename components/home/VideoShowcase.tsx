@@ -112,9 +112,7 @@ export default function VideoShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {videos.map((v, i) => <VideoCard key={i} video={v} index={i} />)}
         </div>
-        <p className="text-center mt-8 font-body text-xs italic" style={{ color: "var(--text-faint)" }}>
-          Add your TikTok video IDs in <code style={{ color: "var(--gold)" }}>components/home/VideoShowcase.tsx</code>
-        </p>
+       
       </div>
     </section>
   );
