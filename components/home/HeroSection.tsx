@@ -59,7 +59,7 @@ export default function HeroSection() {
             We craft interiors that reflect who you are — houses, apartments, kitchens, offices. Every detail intentional. Every space unforgettable.
           </p>
           <div className="flex flex-wrap gap-4" style={{ animation: "fadeUp 0.8s 0.6s ease forwards", opacity: 0 }}>
-            <Link href="/gallery" className="btn-gold-filled">View Our Projects <ArrowRight size={16} /></Link>
+            <Link href="/gallery" className="btn-gold-filled">Finished Projects <ArrowRight size={16} /></Link>
             <Link href="/contact" className="btn-gold">Start Your Project</Link>
           </div>
         </div>
