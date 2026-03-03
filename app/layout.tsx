@@ -29,10 +29,8 @@ export const metadata: Metadata = {
   description:
     "Nap's Interior Decor — Cameroon's premier luxury interior design studio. We transform houses, apartments, offices and kitchens into stunning spaces across Douala, Yaoundé and all of Cameroon. Contact us today.",
   keywords: [
-    // Brand
     "Nap's Interior Decor",
     "Naps Interior Decor Cameroon",
-    // Core services
     "interior design Cameroon",
     "interior decorator Cameroon",
     "luxury interior design Cameroon",
@@ -41,18 +39,15 @@ export const metadata: Metadata = {
     "home decor Cameroon",
     "interior designer Douala",
     "interior designer Yaoundé",
-    // Room types
     "kitchen design Cameroon",
     "bedroom design Cameroon",
     "living room design Cameroon",
     "apartment design Cameroon",
     "office interior design Cameroon",
-    // French keywords (Cameroon is bilingual!)
     "décoration intérieure Cameroun",
     "design intérieur Douala",
     "décorateur intérieur Cameroun",
     "aménagement intérieur Cameroun",
-    // General
     "luxury home decor",
     "residential interior design",
     "commercial interior design",
@@ -62,9 +57,7 @@ export const metadata: Metadata = {
   creator: "Nap's Interior Decor",
   publisher: "Nap's Interior Decor",
   metadataBase: new URL("https://napsinteriordecor.vercel.app"),
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_CM",
@@ -103,3 +96,18 @@ export const metadata: Metadata = {
     google: "l_5JjPOCmlBsT4_tKUGV0uaQf_Q3XgWTSvZWhFezZ5Q",
   },
 };
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
+      <body>
+        <ThemeProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
