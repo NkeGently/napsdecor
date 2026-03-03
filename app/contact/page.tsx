@@ -4,12 +4,6 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 
-export const metadata = {
-  title: "Contact Us — Interior Design Services in Cameroon",
-  description: "Get in touch with Nap's Interior Decor for luxury interior design services in Douala, Yaoundé and all of Cameroon. Call or WhatsApp us today.",
-  alternates: { canonical: "https://napsinteriordecor.vercel.app/contact" },
-};
-
 // ✅ These now read from your .env.local file automatically
 const SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;

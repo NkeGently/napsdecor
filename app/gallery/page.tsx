@@ -3,12 +3,6 @@
 import { useState } from "react";
 import { X, Play } from "lucide-react";
 
-export const metadata = {
-  title: "Gallery — Our Interior Design Projects in Cameroon",
-  description: "Browse Nap's Interior Decor portfolio — luxury bedroom, kitchen, living room and office designs across Cameroon.",
-  alternates: { canonical: "https://napsinteriordecor.vercel.app/gallery" },
-};
-
 const categories = ["All", "Living Room", "Kitchen", "Bedroom", "Apartment", "Commercial"];
 
 type MediaItem = {
