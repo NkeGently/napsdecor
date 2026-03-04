@@ -6,9 +6,10 @@ import VideoShowcase from "@/components/home/VideoShowcase";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import CTASection from "@/components/home/CTASection";
 
-export const metadata = {
-  title: "Luxury Interior Design in Cameroon",
-  description: "Nap's Interior Decor transforms homes and offices across Cameroon. View our portfolio of stunning interiors in Douala, Yaoundé and beyond.",
+export const metadata: Metadata = {
+  title: "Luxury Interior Design in Cameroon | Nap's Interior Decor",
+  description:
+    "Nap's Interior Decor transforms homes and offices across Cameroon. Luxury interior design services in Douala, Yaoundé and beyond. Where spaces become art.",
   alternates: { canonical: "https://napsinteriordecor.vercel.app" },
 };
 

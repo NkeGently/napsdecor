@@ -20,7 +20,6 @@ const WhatsAppIcon = () => (
 export default function Footer() {
   return (
     <footer style={{ background: "var(--bg-secondary)", borderTop: "1px solid var(--border)" }}>
-      {/* CTA strip */}
       <div className="py-16 text-center px-6" style={{ background: "var(--bg-card)", borderBottom: "1px solid var(--border)" }}>
         <p className="font-display font-light mb-3" style={{ fontSize: "clamp(1.8rem,4vw,3.5rem)", color: "var(--text-primary)" }}>
           Ready to Transform Your Space?
@@ -29,14 +28,18 @@ export default function Footer() {
           Let&apos;s create something extraordinary together
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://wa.me/237678667222?text=Hello%2C%20I%27m%20interested%20in%20your%20interior%20design%20services." target="_blank" rel="noopener noreferrer" className="btn-gold-filled">
+          <a href="https://wa.me/237678667222?text=Hello%2C%20I%27m%20interested%20in%20your%20interior%20design%20services."
+            target="_blank" rel="noopener noreferrer"
+            title="Chat with Nap's Interior Decor on WhatsApp"
+            className="btn-gold-filled">
             <WhatsAppIcon /> Chat on WhatsApp
           </a>
-          <Link href="/contact" className="btn-gold">Send a Message</Link>
+          <Link href="/contact" title="Send a message to Nap's Interior Decor" className="btn-gold">
+            Send a Message
+          </Link>
         </div>
       </div>
 
-      {/* Main */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
           <p className="gold-shimmer font-display text-3xl font-light tracking-widest mb-1">NAP&apos;S</p>
@@ -46,11 +49,12 @@ export default function Footer() {
           </p>
           <div className="flex gap-3 mt-8">
             {[
-              { href: "https://www.tiktok.com/@arrahnapol", icon: <TikTokIcon />, label: "TikTok" },
-              { href: "https://www.facebook.com/share/1DN5WjdXd2/", icon: <FacebookIcon />, label: "Facebook" },
-              { href: "https://wa.me/237678667222", icon: <WhatsAppIcon />, label: "WhatsApp" },
+              { href: "https://www.tiktok.com/@arrahnapol", icon: <TikTokIcon />, label: "TikTok", title: "Follow Nap's Interior Decor on TikTok" },
+              { href: "https://www.facebook.com/share/1DN5WjdXd2/", icon: <FacebookIcon />, label: "Facebook", title: "Follow Nap's Interior Decor on Facebook" },
+              { href: "https://wa.me/237678667222", icon: <WhatsAppIcon />, label: "WhatsApp", title: "Chat with Nap's Interior Decor on WhatsApp" },
             ].map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                aria-label={s.label} title={s.title}
                 className="w-9 h-9 flex items-center justify-center transition-all duration-300 hover:border-[var(--gold)] hover:text-[var(--gold)]"
                 style={{ border: "1px solid var(--border)", color: "var(--text-muted)" }}>
                 {s.icon}
@@ -62,9 +66,18 @@ export default function Footer() {
         <div>
           <p className="text-xs tracking-[0.3em] uppercase mb-6 font-body" style={{ color: "var(--gold)" }}>Navigation</p>
           <ul className="space-y-3">
-            {[["Home", "/"], ["About Us", "/about"], ["Portfolio", "/gallery"], ["Contact", "/contact"]].map(([l, h]) => (
+            {[
+              ["Home", "/", "Nap's Interior Decor Homepage"],
+              ["About Us", "/about", "About Nap's Interior Decor"],
+              ["Portfolio", "/gallery", "Interior Design Portfolio Gallery"],
+              ["Contact", "/contact", "Contact Nap's Interior Decor"],
+            ].map(([l, h, t]) => (
               <li key={h}>
-                <Link href={h} className="font-body text-sm gold-underline hover:text-[var(--gold)] transition-colors" style={{ color: "var(--text-muted)" }}>{l}</Link>
+                <Link href={h} title={t}
+                  className="font-body text-sm gold-underline hover:text-[var(--gold)] transition-colors"
+                  style={{ color: "var(--text-muted)" }}>
+                  {l}
+                </Link>
               </li>
             ))}
           </ul>
@@ -75,11 +88,11 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="flex items-center gap-3 text-sm font-body" style={{ color: "var(--text-muted)" }}>
               <Phone size={14} style={{ color: "var(--gold)" }} className="shrink-0" />
-              <a href="tel:+237678667222" className="hover:text-[var(--gold)] transition-colors">+237 678 66 72 22</a>
+              <a href="tel:+237678667222" title="Call Nap's Interior Decor" className="hover:text-[var(--gold)] transition-colors">+237 678 66 72 22</a>
             </li>
             <li className="flex items-center gap-3 text-sm font-body" style={{ color: "var(--text-muted)" }}>
               <Mail size={14} style={{ color: "var(--gold)" }} className="shrink-0" />
-              <a href="mailto:arraknapoleon6@gmail.com" className="hover:text-[var(--gold)] transition-colors break-all">arraknapoleon6@gmail.com</a>
+              <a href="mailto:arraknapoleon6@gmail.com" title="Email Nap's Interior Decor" className="hover:text-[var(--gold)] transition-colors break-all">arraknapoleon6@gmail.com</a>
             </li>
             <li className="flex items-start gap-3 text-sm font-body" style={{ color: "var(--text-muted)" }}>
               <MapPin size={14} style={{ color: "var(--gold)" }} className="shrink-0 mt-0.5" />
